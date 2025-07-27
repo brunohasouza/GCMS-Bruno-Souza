@@ -32,4 +32,9 @@ public class HomeController {
 	public @ResponseBody String greetingFromVsCode() {
 		return "Hello World from Visual Studio Code!";
 	}
+	
+	@RequestMapping("/eclipse")
+	public @ResponseBody String greetingFromEclipse() {
+		return "Hello World from Eclipse!";
+	}
 }
