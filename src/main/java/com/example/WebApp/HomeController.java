@@ -27,4 +27,9 @@ public class HomeController {
 	public @ResponseBody String greetingUrlParam(@PathVariable("param") String param) {
 		return "Hello " + param + "!";
 	}
+
+	@RequestMapping("/vscode")
+	public @ResponseBody String greetingFromVsCode() {
+		return "Hello World from Visual Studio Code!";
+	}
 }
