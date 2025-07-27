@@ -37,4 +37,9 @@ public class HomeController {
 	public @ResponseBody String greetingFromEclipse() {
 		return "Hello World from Eclipse!";
 	}
+	
+	@RequestMapping("/hotfix")
+	public @ResponseBody String hotfixBranch() {
+		return "Endpoint na branch 'hotfix'";
+	}
 }
