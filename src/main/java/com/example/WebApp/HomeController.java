@@ -37,4 +37,9 @@ public class HomeController {
 	public @ResponseBody String greetingFromEclipse() {
 		return "Hello World from Eclipse!";
 	}
+	
+	@RequestMapping("/main")
+	public @ResponseBody String endpointMainBranch() {
+		return "Endpoint in 'main' branch!";
+	}
 }
