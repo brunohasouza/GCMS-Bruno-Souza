@@ -34,6 +34,13 @@ class WebAppApplicationTests {
 	}
 	
 	@Test
+	public void shouldReturnQueryParamMessage() throws Exception {
+		this.mockMvc.perform(get("/greeting?param=meu-teste"))
+					.andDo(print()).andExpect(status().isOk())
+					.andExpect(content().string(containsString("Hello meu-teste!")));
+	}
+	
+	@Test
 	public void shouldReturnUrlParamMessage() throws Exception {
 		this.mockMvc.perform(get("/greeting/teste"))
 					.andDo(print()).andExpect(status().isOk())
