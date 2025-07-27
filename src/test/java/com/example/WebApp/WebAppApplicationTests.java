@@ -72,6 +72,6 @@ class WebAppApplicationTests {
 	public void shouldReturnHotfixMessage() throws Exception {
 		this.mockMvc.perform(get("/hotfix"))
 					.andDo(print()).andExpect(status().isOk())
-					.andExpect(content().string(containsString("Endpoint na branch 'hotfix (quebrado)'")));
+					.andExpect(content().string(containsString("Endpoint na branch 'hotfix'")));
 	}
 }
