@@ -46,4 +46,11 @@ class WebAppApplicationTests {
 					.andDo(print()).andExpect(status().isOk())
 					.andExpect(content().string(containsString("Hello teste!")));
 	}
+	
+	@Test
+	public void shouldReturnVscodeMessage() throws Exception {
+		this.mockMvc.perform(get("/vscode"))
+					.andDo(print()).andExpect(status().isOk())
+					.andExpect(content().string(containsString("Hello World from Visual Studio Code!")));
+	}
 }
