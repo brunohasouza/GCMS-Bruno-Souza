@@ -53,4 +53,11 @@ class WebAppApplicationTests {
 					.andDo(print()).andExpect(status().isOk())
 					.andExpect(content().string(containsString("Hello World from Visual Studio Code!")));
 	}
+	
+	@Test
+	public void shouldReturnEclipseMessage() throws Exception {
+		this.mockMvc.perform(get("/eclipse"))
+					.andDo(print()).andExpect(status().isOk())
+					.andExpect(content().string(containsString("Hello World from Eclipse!")));
+	}
 }
