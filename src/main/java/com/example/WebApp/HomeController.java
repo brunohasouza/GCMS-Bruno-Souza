@@ -42,4 +42,9 @@ public class HomeController {
 	public @ResponseBody String endpointMainBranch() {
 		return "Endpoint in 'main' branch!";
 	}
+	
+	@RequestMapping("/hotfix")
+	public @ResponseBody String hotfixBranch() {
+		return "Endpoint na branch 'hotfix'";
+	}
 }

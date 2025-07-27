@@ -67,4 +67,11 @@ class WebAppApplicationTests {
 					.andDo(print()).andExpect(status().isOk())
 					.andExpect(content().string(containsString("Endpoint in 'main' branch!")));
 	}
+
+	@Test
+	public void shouldReturnHotfixMessage() throws Exception {
+		this.mockMvc.perform(get("/hotfix"))
+					.andDo(print()).andExpect(status().isOk())
+					.andExpect(content().string(containsString("Endpoint na branch 'hotfix'")));
+	}
 }
