@@ -32,4 +32,11 @@ class WebAppApplicationTests {
 					.andExpect(content()
 							.string(containsString("Hello, Bruno!")));
 	}
+	
+	@Test
+	public void shouldReturnUrlParamMessage() throws Exception {
+		this.mockMvc.perform(get("/greeting/teste"))
+					.andDo(print()).andExpect(status().isOk())
+					.andExpect(content().string(containsString("Hello teste!")));
+	}
 }
